@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 
 start = time.perf_counter()
-def test():
+def writeValues():
     file = open('test.txt', 'w')
     while time.perf_counter() - start < 1:
         file.write(str(pyautogui.position().x) + ' ')
@@ -19,5 +19,5 @@ def plot():
         plt.xlabel('X values')
         plt.ylabel('Y values')
         plt.show()
-test()
+writeValues()
 plot()
